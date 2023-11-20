@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.machine-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .machine {
+        background-image: url('/assets/images/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 35em;
+        height: 45em;
+        padding: 1.5em;
+        margin: auto;
+        position: relative;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: "items order" "grab grab";
+        border: 5px solid rgb(98, 99, 100);
+
+        .order {
+            .messages-screen {
+                background: rgb(224, 222, 255);
+                padding: 5px 10px;
+                margin-bottom: 20px;
+                height: 110px;
+
+                p {
+                    color: #4138b6;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .grab {
+            background-color: #5d3a7d;
+            height: 10em;
+            border-radius: 10px;
+            grid-area: "grab";
+            position: relative;
+
+            .rectangle {
+                background-color: rgb(49, 50, 51);
+                width: 80%;
+                height: 3em;
+                margin: 3em auto;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                position: absolute;
+                z-index: 10 ;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            
+                &-item {
+                    width: 3em;
+                    height: auto;
+                    transform: translateY(-50px) rotate(90deg);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .3s;
+            
+                    &.visible {
+                        transform: translateY(0) rotate(90deg);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .machine-wrapper {
+        display: block;
+
+        .machine {
+            display: block;
+            width: 100%;
+            height: auto;
+
+            .order .messages-screen {
+                height: 50px;
+                margin: 10px 0;
+            }
+        }
+    }
+}

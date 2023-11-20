@@ -1,0 +1,39 @@
+.coins-container {
+    padding: 10px;
+
+    .coins-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 10px;
+        flex-wrap: wrap;
+    
+        .coin {
+            text-align: center;   
+            overflow: hidden;
+            margin: 0 5px;
+    
+            img {
+                width: 80px;
+                height: 80px;
+                cursor: pointer;
+                transform: rotate(0);
+                transition: all .3s;
+            }
+    
+            &:hover {
+                img {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    
+    .actions-wrapper {
+        text-align: center;
+    
+        button + button {
+            margin-left: 15px;
+        }
+    }
+}

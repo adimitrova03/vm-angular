@@ -1,0 +1,10 @@
+<div class="items">
+    <div *ngFor="let item of products" class="item">
+        <div class="item-image-wrapper">
+            <img class="picker" [ngClass]="{'animate' : selectedItem === item.id, 'hidden' : item.quantity === 0}" src="assets/images/products/{{item.name}}.png" [alt]="item.name" />
+            <img *ngIf="item.quantity > 0" class="picker picker-rest" src="assets/images/products/{{item.name}}.png" [alt]="item.name" />
+        </div>
+        
+        <p class="label">{{ item.id }} | {{ (item.price/100) | number : '1.2-2' }} €</p>
+    </div>
+</div>

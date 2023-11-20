@@ -1,0 +1,55 @@
+:host {
+    margin-bottom: 20px;
+    display: block;
+
+    .balance-screen {
+        background: rgb(224, 222, 255);
+        text-align: right;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    
+        p {
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+    
+    .coins-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .coins {
+            width: 7em;
+            grid-area: "coins";
+        
+            .money {
+                background-color: #5d3a7d;
+                width: 6em;
+                height: 3em;
+        
+                .circle {
+                    background-color: rgb(49, 50, 51);
+                    width: 30px;
+                    height: 20px;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    margin: auto;
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (max-width: 460px) {
+    :host {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .balance-screen {
+            margin-bottom: 0;
+        }
+    }
+}

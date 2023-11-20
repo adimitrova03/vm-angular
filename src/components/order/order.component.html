@@ -1,0 +1,16 @@
+
+<div class="order-screen">
+    <input type="text" [formControl]="inputOrderControl" readonly />
+</div>
+
+<div class="buttons">
+    <button class="btn letter" (click)="setValue('A')">A</button>
+    <button class="btn letter" (click)="setValue('B')">B</button>
+    <button class="btn letter" (click)="setValue('C')">C</button>
+    <button class="btn number" (click)="setValue('1')">1</button>
+    <button class="btn number" (click)="setValue('2')">2</button>
+    <button class="btn number" (click)="setValue('3')">3</button>
+    <button class="btn number" (click)="onDeleteLastSymbol()">Del</button>
+    <button class="btn number" (click)="onReset()">Res</button>
+    <button class="btn number" (click)="onBuy()">Buy</button>
+</div>

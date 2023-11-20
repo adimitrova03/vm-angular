@@ -1,0 +1,67 @@
+{
+    "products": [
+      {
+        "id": "A1",
+        "name": "coke",
+        "label": "Coke Cola",
+        "price": 200,
+        "quantity": 1
+      },
+      {
+        "id": "B1",
+        "name": "fanta",
+        "label": "Fanta",
+        "price": 190,
+        "quantity": 7
+      },
+      {
+        "id": "C1",
+        "name": "sprite",
+        "label": "Sprite",
+        "price": 180,
+        "quantity": 5
+      },
+      {
+        "id": "A2",
+        "name": "lays-classic",
+        "label": "Lay`s Classic",
+        "price": 300,
+        "quantity": 10
+      },
+      {
+        "id": "B2",
+        "name": "lays-vinegar",
+        "label": "Lay`s Vingar",
+        "price": 340,
+        "quantity": 2
+      },
+      {
+        "id": "C2",
+        "name": "lays-cheese",
+        "label": "Lay`s Cheese",
+        "price": 360,
+        "quantity": 15
+      },
+      {
+        "id": "A3",
+        "name": "snickers",
+        "label": "Snickers",
+        "price": 150,
+        "quantity": 5
+      },
+      {
+        "id": "B3",
+        "name": "mars",
+        "label": "Mars",
+        "price": 140,
+        "quantity": 6
+      },
+      {
+        "id": "C3",
+        "name": "twix",
+        "label": "Twix",
+        "price": 160,
+        "quantity": 9
+      }
+    ]
+}

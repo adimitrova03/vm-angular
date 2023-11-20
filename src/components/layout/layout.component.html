@@ -1,0 +1,24 @@
+<div class="machine-wrapper">
+    <div *ngIf="(products | async) as view; else spinner" class="machine">
+
+        <app-products [products]="view.products" [selectedItem]="selectedProduct ? selectedProduct.id : ''"></app-products>
+    
+        <div class="order"> 
+            <div class="messages-screen">
+                <p>{{ message }}</p>
+            </div>
+            <app-coins></app-coins>
+            <app-order [products]="view.products" (makePurchase)="onMakePurchase($event)"></app-order>
+        </div>
+    
+        <div class="grab">
+            <div class="rectangle">
+                <img class="rectangle-item" [ngClass]="{'visible' : imageName}" src="assets/images/products/{{imageName}}.png" alt="Selected Product" />
+            </div>
+        </div>
+    </div>
+    
+    <ng-template #spinner>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+</div>

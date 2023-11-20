@@ -1,0 +1,38 @@
+<div class="coins-container">
+    <div class="coins-wrapper">
+        <div class="coin" (click)="addCoin(5)">
+            <img src="assets/images/coins/5-cent.png" alt="5 cent" />
+            <p>5 cent</p>
+        </div>
+    
+        <div class="coin" (click)="addCoin(10)">
+            <img src="assets/images/coins/10-cent.png" alt="10 cent" />
+            <p>10 cent</p>
+        </div>
+    
+        <div class="coin" (click)="addCoin(20)">
+            <img src="assets/images/coins/20-cent.png" alt="20 cent" />
+            <p>20 cent</p>
+        </div>
+    
+        <div class="coin" (click)="addCoin(50)">
+            <img src="assets/images/coins/50-cent.png" alt="50 cent" />
+            <p>50 cent</p>
+        </div>
+    
+        <div class="coin" (click)="addCoin(100)">
+            <img src="assets/images/coins/1-euro.png" alt="1 euro" />
+            <p>1 euro</p>
+        </div>
+    
+        <div class="coin" (click)="addCoin(200)">
+            <img src="assets/images/coins/2-euro.png" alt="2 euro" />
+            <p>2 euro</p>
+        </div>
+    </div>
+    
+    <div class="actions-wrapper">
+        <button mat-raised-button color="primary" (click)="resetBalance()">Get coins back</button>
+        <button mat-raised-button color="primary" (click)="closeDialog()">Procced</button>
+    </div>
+</div>
